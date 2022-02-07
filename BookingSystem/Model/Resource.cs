@@ -7,6 +7,5 @@ namespace BookingSystem.Model
         public string Name { get; set; }
         public int Quantity { get; set; }
 
-        public List<Booking> Bookings { get; } = new();
     }
 }
