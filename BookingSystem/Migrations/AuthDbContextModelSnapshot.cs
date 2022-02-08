@@ -46,8 +46,8 @@ namespace BookingSystem.Migrations
                         {
                             Id = 1,
                             BookedQuantity = 2,
-                            DateFrom = new DateTime(2022, 2, 7, 22, 25, 0, 737, DateTimeKind.Local).AddTicks(1922),
-                            DateTo = new DateTime(2022, 2, 8, 22, 25, 0, 737, DateTimeKind.Local).AddTicks(1952),
+                            DateFrom = new DateTime(2022, 2, 8, 20, 52, 52, 432, DateTimeKind.Local).AddTicks(4657),
+                            DateTo = new DateTime(2022, 2, 9, 20, 52, 52, 432, DateTimeKind.Local).AddTicks(4687),
                             ResourceId = 1
                         });
                 });

@@ -6,6 +6,7 @@ namespace BookingSystem.Helpers
     {
         public bool Check(List<Booking> bookings, Resource actualResource, Booking bookingToCompare)
         {
+            DateTimeHelper dateTimeHelper = new();
             // Check for all data needed.
             if( bookings == null || actualResource == null || bookingToCompare == null )
             {
@@ -16,7 +17,7 @@ namespace BookingSystem.Helpers
             {
                 if (booking.ResourceId == bookingToCompare.ResourceId)
                 {
-                    if (booking.DateFrom <= bookingToCompare.DateTo && bookingToCompare.DateFrom <= booking.DateTo)
+                    if(dateTimeHelper.AreDateTimeRangesOverlap(booking.DateFrom, booking.DateTo, bookingToCompare.DateFrom, bookingToCompare.DateTo))
                     {
                         bookedQuantity += booking.BookedQuantity;
                     }

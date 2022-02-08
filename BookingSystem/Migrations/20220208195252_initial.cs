@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -41,7 +42,7 @@ namespace BookingSystem.Migrations
             migrationBuilder.InsertData(
                 table: "Bookings",
                 columns: new[] { "Id", "BookedQuantity", "DateFrom", "DateTo", "ResourceId" },
-                values: new object[] { 1, 2, new DateTime(2022, 2, 7, 22, 25, 0, 737, DateTimeKind.Local).AddTicks(1922), new DateTime(2022, 2, 8, 22, 25, 0, 737, DateTimeKind.Local).AddTicks(1952), 1 });
+                values: new object[] { 1, 2, new DateTime(2022, 2, 8, 20, 52, 52, 432, DateTimeKind.Local).AddTicks(4657), new DateTime(2022, 2, 9, 20, 52, 52, 432, DateTimeKind.Local).AddTicks(4687), 1 });
 
             migrationBuilder.InsertData(
                 table: "Resources",

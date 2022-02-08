@@ -5,7 +5,7 @@ namespace BookingSystem.Services
 {
     public class ResourceService : IResourceService
     {
-        AuthDbContext dbContext = new AuthDbContext();
+        readonly AuthDbContext dbContext = new();
         public List<Resource> GetAllResources()
         {
             var result = from resources in dbContext.Resources

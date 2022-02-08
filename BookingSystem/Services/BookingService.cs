@@ -6,7 +6,7 @@ namespace BookingSystem.Services
 {
     public class BookingService : IBookingService
     {
-        AuthDbContext dbContext = new AuthDbContext();
+        readonly AuthDbContext dbContext = new();
 
         public bool CreateBooking(Booking booking)
         {
@@ -22,6 +22,7 @@ namespace BookingSystem.Services
             {
                 dbContext.Bookings.Add(booking);
                 dbContext.SaveChanges();
+                Console.WriteLine("EMAIL SENT TO admin@admin.com FOR CREATED BOOKING WITH ID = " + booking.Id);
             }
             return result;
         }
