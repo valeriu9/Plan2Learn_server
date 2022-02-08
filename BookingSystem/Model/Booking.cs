@@ -1,7 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace BookingSystem.Model
+﻿namespace BookingSystem.Model
 {
     public class Booking
     {

@@ -19,12 +19,12 @@ namespace BookingSystem.Controllers
         [HttpPost("~/create-booking")]
         public IActionResult CreateBooking([FromBody] Booking booking)
         {
-            if(booking.BookedQuantity == 0 || booking.ResourceId == 0)
+            if (booking.BookedQuantity == 0 || booking.ResourceId == 0)
             {
                 return BadRequest("Some parameters are missing or incorrect");
             }
             var isValid = bookings.CreateBooking(booking);
-            return Ok( isValid ? new {statusType = "success", message= "Booked successfuly" } : new { statusType = "error", message = "The resources you are trying to book are not available for these days" });
+            return Ok(isValid ? new { statusType = "success", message = "Booked successfuly" } : new { statusType = "error", message = "The resources you are trying to book are not available for these days" });
         }
 
     }

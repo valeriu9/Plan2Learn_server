@@ -9,7 +9,7 @@ namespace BookingSystem.Services
         public List<Resource> GetAllResources()
         {
             var result = from resources in dbContext.Resources
-                      select resources;
+                         select resources;
             return result.ToList();
         }
         public Resource GetResourceById(int id)

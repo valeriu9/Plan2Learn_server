@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookingSystem.Data
 {
-    public class AuthDbContext: DbContext
+    public class AuthDbContext : DbContext
     {
         public DbSet<Booking>? Bookings { get; set; }
         public DbSet<Resource>? Resources { get; set; }
-        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new SqliteConnectionStringBuilder();
